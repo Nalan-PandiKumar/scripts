@@ -1,3 +1,18 @@
+"""
+fmt_str_byte.py – Minimalist format string payload generator
+
+This is a lightweight custom library I wrote just for fun, 
+focused on generating %hhn (byte) arbitrary write payloads 
+with positional ($) arguments.
+
+I didn’t feel like digging through the full pwnlib fmtstr 
+documentation, so I built my own stripped-down version instead. 
+Think of it as a mini pwnlib helper for quick %hhn exploits.
+
+⚡ Note: Whoever wants to dig through endless docs while 
+CTF timers are ticking... good luck, have fun! 😆
+"""
+
 def byte_map(word: int, addr: int) -> list[tuple[int, int]]:
     """
     Convert a word (dword/qword) into byte map
